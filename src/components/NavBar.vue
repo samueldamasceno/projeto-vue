@@ -1,10 +1,10 @@
 <template>
     <div class="navbar">
         <div class="container-itens">
-            <img src="../assets/home-icon.svg" alt="Home Icon" />
-            <img src="../assets/search-icon.svg" alt="Search Icon" />
-            <img src="../assets/discover-icon.svg" alt="Discover Icon" />
-            <img src="../assets/profile-icon.svg" alt="Profile Icon" />
+            <img src="../assets/home-icon.svg" alt="Home Icon" @click="redirecionar('Página Inicial')" />
+            <img src="../assets/search-icon.svg" alt="Search Icon" @click="redirecionar('Busca')"/>
+            <img src="../assets/discover-icon.svg" alt="Discover Icon" @click="redirecionar('Explorar')" />
+            <img src="../assets/profile-icon.svg" alt="Profile Icon" @click="redirecionar('Usuário')"/>
         </div>
         <div class="container-itens">
             <img src="../assets/create-icon.svg" alt="Create Icon" />
@@ -16,6 +16,13 @@
 <script>
   export default {
     name: 'NavBar',
+
+    methods: {
+      redirecionar(pagina) {
+        this.$router.push({name: pagina});
+      },
+    },
+  
 };
 </script>
   
