@@ -93,6 +93,7 @@ export default {
     .livros {
         display: flex;
         overflow-x: hidden;
+        overflow-y: hidden;
         scroll-behavior: smooth;
         margin: 0 50px;
         margin-top: 20px;

@@ -40,6 +40,12 @@
     text-align: center;
     margin: 0 10px;
     border-radius: 10px;
+    transition: all 0.4s;
+    transform-origin: center;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     img {
         width: 100%;
