@@ -1,37 +1,16 @@
 <template>
   <div id="app">
-    <Transition name="navbar">
-      <NavBar v-if="isMenuVisible" />
-    </Transition>
-    <AppHeader @toggle-menu="toggleMenu" />
+    <RouterView />
   </div>
 </template>
 
-<script>
-import NavBar from './components/NavBar.vue';
-import AppHeader from './components/AppHeader.vue';
 
+<script>
 export default {
   name: 'App',
-  components: {
-    NavBar,
-    AppHeader,
-  },
-
-  data() {
-    return {
-      isMenuVisible: false,
-    };
-  },
-
-  methods: {
-    toggleMenu() {
-      this.isMenuVisible = !this.isMenuVisible;
-      console.log(this.isMenuVisible);
-    },
-  },
 };
 </script>
+
 
 <style lang="scss">
 @import '@/assets/scss/global.scss';

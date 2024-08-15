@@ -40,7 +40,7 @@
         cursor: pointer;
         width: 40px;
         height: 40px;
-        transition: filter 0.5s ease-in-out;
+        transition: filter 0.3s ease-in-out;
         }
 
     .container-itens {

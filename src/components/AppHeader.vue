@@ -31,7 +31,7 @@
         top: 15px;
         z-index: 5;
         cursor: pointer;
-        transition: filter 0.5s ease-in-out;
+        transition: filter 0.3s ease-in-out;
 
         &:hover {
             filter: drop-shadow(
