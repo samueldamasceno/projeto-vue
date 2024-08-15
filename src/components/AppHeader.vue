@@ -15,7 +15,8 @@
 
 .header {
     position: relative;
-    background-color: $cor2;
+    background: rgb(35,157,96);
+    background: linear-gradient(135deg, rgba(35,157,96,1) 0%, rgba(163,211,131,1) 100%);
     padding: 10px 20px;
     display: flex;
     align-items: center;
@@ -24,17 +25,38 @@
 
     input {
         flex: 1;
-        padding: 10px;
+        padding: 20px;
         border: none;
         border-radius: 5px;
         background-color: $cor5;
-        border: 3px solid $cor4;
+        border: none;
         border-radius: 8px;
         position: relative;
+        font-family: $fonte1;
         text-align: center;
+        font-size: 2rem;
         margin-left: 20%;
         margin-right: 20%;
         z-index: 10;
+        transition: box-shadow 0.3s ease-in-out;
+
+        &::placeholder {
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:focus {
+            outline: none;
+            border: none;
+            box-shadow: 0 0 10px $cor4b;
+        }
+
+        &:hover {
+            cursor: text;
+            
+            &::placeholder {
+                color: $cor3;
+            }
+        }
     }
 }
 </style>
