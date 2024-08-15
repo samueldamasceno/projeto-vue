@@ -4,7 +4,7 @@
         <Transition name="navbar">
             <NavBar v-if="isMenuVisible" />
         </Transition>
-        <AppHeader @toggle-menu="toggleMenu" />
+        <AppHeader/>
     </div>
 </template>
 
