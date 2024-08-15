@@ -19,6 +19,7 @@
     background: linear-gradient(135deg, rgba(35,157,96,1) 0%, rgba(163,211,131,1) 100%);
     padding: 10px 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
     height: 200px;
     overflow: hidden;
@@ -37,11 +38,15 @@
         font-size: 2rem;
         margin-left: 20%;
         margin-right: 20%;
-        z-index: 10;
+        z-index: 3;
         transition: box-shadow 0.3s ease-in-out;
 
         &::placeholder {
             transition: all 0.3s ease-in-out;
+
+            @media screen and (max-width: 800px) {
+                font-size: 1.5rem;
+            }
         }
 
         &:focus {

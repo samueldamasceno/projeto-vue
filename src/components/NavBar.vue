@@ -42,13 +42,25 @@
     transform: translateX(0);
     z-index: 5;
 
+    @media screen and (max-width: 800px) {
+        width: 30vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
     img {
         margin-bottom: 10px;
         cursor: pointer;
         width: 40px;
         height: 40px;
         transition: filter 0.3s ease-in-out;
+
+        @media screen and (max-width: 800px) {
+            width: 70px;
+            height: 70px;
         }
+    }
 
     .container-itens {
         display: flex;
