@@ -40,7 +40,8 @@
     align-items: center;
     padding-top: 20px;
     transform: translateX(0);
-    z-index: 5;
+    z-index: 10;
+    border-right: 6px solid $cor1;
 
     @media screen and (max-width: 800px) {
         width: 30vw;

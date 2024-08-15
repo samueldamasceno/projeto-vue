@@ -4,19 +4,28 @@
         <Transition name="navbar">
             <NavBar v-if="isMenuVisible" />
         </Transition>
-        <AppHeader/>
+        <HomeHeader/>
+        <SecaoContinue/>
+        <SecaoSugestoes/>
+        <SecaoTopLivros/>
     </div>
 </template>
 
 <script>
-import AppHeader from '@/components/AppHeader.vue';
+import HomeHeader from '@/components/HomeHeader.vue';
 import NavBar from '@/components/NavBar.vue';
+import SecaoContinue from '@/components/SecaoContinue.vue';
+import SecaoSugestoes from '@/components/SecaoSugestoes.vue';
+import SecaoTopLivros from '@/components/SecaoTopLivros.vue';
 
 export default {
     name: 'HomePage',
     components: {
-        AppHeader,
-        NavBar
+        HomeHeader,
+        NavBar,
+        SecaoContinue,
+        SecaoSugestoes,
+        SecaoTopLivros
     },
 
     data() {
@@ -43,7 +52,7 @@ export default {
     position: fixed;
     left: 15px;
     top: 15px;
-    z-index: 10;
+    z-index: 11;
     cursor: pointer;
     transition: filter 0.3s ease-in-out;
 
