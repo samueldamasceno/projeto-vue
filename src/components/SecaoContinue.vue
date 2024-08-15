@@ -92,12 +92,15 @@ export default {
   
     .livros {
         display: flex;
+        align-items: center;
         overflow-x: hidden;
         overflow-y: hidden;
         scroll-behavior: smooth;
         margin: 0 50px;
         margin-top: 20px;
+        padding: 20px 0;
         white-space: nowrap;
+        height: auto;
     }
   
     .botao-nav {
