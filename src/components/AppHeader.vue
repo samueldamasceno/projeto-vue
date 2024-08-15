@@ -31,6 +31,13 @@
         top: 15px;
         z-index: 5;
         cursor: pointer;
+        transition: filter 0.5s ease-in-out;
+
+        &:hover {
+            filter: drop-shadow(
+                0 0 8px $cor5b
+            );
+        }
     }
 
     input {
@@ -39,16 +46,16 @@
         border: none;
         border-radius: 5px;
         background-color: $cor5;
-        border: 5px solid $cor4;
+        border: 3px solid $cor4;
         border-radius: 8px;
         position: relative;
         text-align: center;
-        margin-left: 30%;
-        margin-right: 30%;
+        margin-left: 20%;
+        margin-right: 20%;
         z-index: 10;
     }
 
-    &::after {
+    /* &::after {
         content: '';
         display: block;
         position: absolute;
@@ -63,6 +70,6 @@
         background-repeat: no-repeat;
         filter: grayscale(100%);
         z-index: 0;
-    }
+    } */
 }
 </style>

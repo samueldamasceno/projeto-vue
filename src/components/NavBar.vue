@@ -40,7 +40,8 @@
         cursor: pointer;
         width: 40px;
         height: 40px;
-    }
+        transition: filter 0.5s ease-in-out;
+        }
 
     .container-itens {
         display: flex;
@@ -50,11 +51,27 @@
 
         &:first-child{
             margin-top: 80px;
+
+            img {
+                &:hover {
+                    filter: drop-shadow(
+                        0 0 8px $cor1b
+                    )
+                }
+            }
         }
 
         &:nth-child(2) {
             margin-top: auto;
             margin-bottom: 5px;
+
+            img {
+                &:hover {
+                    filter: drop-shadow(
+                        0 0 8px $cor3b
+                    )
+                }
+            }
         }
     }
 }
