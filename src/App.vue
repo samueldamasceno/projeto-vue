@@ -1,26 +1,49 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <Transition name="navbar">
+      <NavBar v-if="isMenuVisible" />
+    </Transition>
+    <AppHeader @toggle-menu="toggleMenu" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue';
+import AppHeader from './components/AppHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    NavBar,
+    AppHeader,
+  },
+
+  data() {
+    return {
+      isMenuVisible: false,
+    };
+  },
+
+  methods: {
+    toggleMenu() {
+      this.isMenuVisible = !this.isMenuVisible;
+      console.log(this.isMenuVisible);
+    },
+  },
+};
 </script>
 
-<style>
+<style lang="scss">
+@import '@/assets/scss/global.scss';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+  main {
+    flex: 1;
+  }
 }
 </style>
