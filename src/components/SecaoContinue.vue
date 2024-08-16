@@ -1,6 +1,6 @@
 <template>
     <section class="secao-continue">
-        <h2 class="titulo-sec">Continue Lendo:</h2>
+        <h2 class="titulo-sec">Continue lendo:</h2>
         <div class="fundo-livros">
             <button class="botao-nav anterior" @click="scrollEsq">&#10094;</button>
             <div class="livros" ref="livros">
@@ -97,7 +97,7 @@ export default {
         overflow-y: hidden;
         scroll-behavior: smooth;
         margin: 0 50px;
-        margin-top: 20px;
+        margin-top: 10px;
         padding: 20px 0;
         white-space: nowrap;
         height: auto;

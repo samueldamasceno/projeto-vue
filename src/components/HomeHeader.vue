@@ -60,7 +60,7 @@
             cursor: text;
             
             &::placeholder {
-                color: $cor3;
+                color: $cor2;
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <div class="livro">
+    <div :class="['livro', tamanhoClass]">
         <img :src="capa || require('../assets/capa-padrao.jpg')" :alt="titulo" @error="handleImageError" />
         <p>{{ titulo }}</p>
     </div>
@@ -8,6 +8,7 @@
 <script>
     export default {
         name: 'AppLivro',
+
         props: {
             titulo: {
                 type: String,
@@ -20,8 +21,19 @@
             capa: {
                 type: String,
                 required: false
+            },
+            tamanho: {
+                type: String,
+                default: 'normal'
             }
         },
+
+        computed: {
+            tamanhoClass() {
+                return this.tamanho === 'grande' ? 'livro-grande' : 'livro-normal';
+            }
+        },
+
         methods: {
             handleImageError(event) {
                 event.target.src = require('../assets/capa-padrao.jpg');
@@ -29,13 +41,13 @@
         }
     };
 </script>
-  
+
 <style scoped lang="scss">
 @import '../assets/scss/variables';
 
 .livro {
     min-width: 120px;
-    width: 120px; 
+    width: 120px;
     height: 200px;
     text-align: center;
     margin: 0 10px;
@@ -45,6 +57,12 @@
 
     &:hover {
         transform: scale(1.05);
+    }
+
+    &.livro-grande {
+        min-width: 180px;
+        width: 180px;
+        height: 300px;
     }
 
     img {
