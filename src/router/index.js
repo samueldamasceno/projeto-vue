@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
+import PaginaPrincipal from "@/views/PaginaPrincipal.vue";
 import HomePage from "@/views/HomePage.vue";
 import SearchPage from "@/views/SearchPage.vue";
 import ExplorePage from "@/views/ExplorePage.vue";
@@ -8,9 +9,14 @@ import UserPage from "@/views/UserPage.vue";
 const routes = [
     {
         path: "/",
-        name: "Página Inicial",
-        component: HomePage,
+        name: "Principal",
+        component: PaginaPrincipal,
         children: [
+            {
+                path: "",
+                name: "Home",
+                component: HomePage
+            },
             {
                 path: "busca",
                 name: "Busca",

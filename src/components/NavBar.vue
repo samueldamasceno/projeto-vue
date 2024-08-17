@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
         <div class="container-itens">
-            <img src="../assets/home-icon.svg" alt="Home Icon" @click="redirecionar('Página Inicial')" />
+            <img src="../assets/home-icon.svg" alt="Home Icon" @click="redirecionar('Home')" />
             <img src="../assets/search-icon.svg" alt="Search Icon" @click="redirecionar('Busca')"/>
             <img src="../assets/discover-icon.svg" alt="Discover Icon" @click="redirecionar('Explorar')" />
             <img src="../assets/profile-icon.svg" alt="Profile Icon" @click="redirecionar('Usuário')"/>
