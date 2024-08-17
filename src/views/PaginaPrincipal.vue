@@ -7,16 +7,19 @@
         <div class="content">
             <RouterView />
         </div>
+        <HomeFooter />
     </div>
 </template>
 
 <script>
     import NavBar from '@/components/NavBar.vue';
+    import HomeFooter from '@/components/HomeFooter.vue';
 
     export default {
         name: 'PaginaPrincipal',
         components: {
-            NavBar
+            NavBar,
+            HomeFooter,
         },
         data() {
             return {

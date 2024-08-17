@@ -1,6 +1,6 @@
 <template>
-    <section class="secao-sugestoes">
-        <h2 class="titulo-sec">Sugestões para você:</h2>
+    <section class="secao-livros">
+        <h2 class="titulo-sec">{{ titulo }}</h2>
         <div class="fundo-livros">
             <button class="botao-nav anterior" @click="scrollEsq">&#10094;</button>
             <div class="livros" ref="livros">
@@ -19,33 +19,22 @@
   
 <script>
 import AppLivro from './AppLivro.vue';
-  
+
 export default {
-    name: 'SecaoSugestoes',
+    name: 'SecaoLivros',
     components: {
         AppLivro
     },
-
-    data() {
-        return {
-            livros: [
-                { id: 1, titulo: 'Livro 1', capa: 'capa.jpg' },
-                { id: 2, titulo: 'Livro 2', capa: 'capa2.jpg' },
-                { id: 3, titulo: 'Livro 3', capa: 'capa3.jpg' },
-                { id: 4, titulo: 'Livro 4', capa: 'capa4.jpg' },
-                { id: 5, titulo: 'Livro 5', capa: 'capa5.jpg' },
-                { id: 6, titulo: 'Livro 6', capa: 'capa6.jpg' },
-                { id: 7, titulo: 'Livro 7', capa: 'capa7.jpg' },
-                { id: 8, titulo: 'Livro 8', capa: 'capa8.jpg' },
-                { id: 9, titulo: 'Livro 9', capa: 'capa9.jpg' },
-                { id: 10, titulo: 'Livro 10', capa: 'capa10.jpg' },
-                { id: 11, titulo: 'Livro 11', capa: 'capa11.jpg' },
-                { id: 12, titulo: 'Livro 12', capa: 'capa12.jpg' },
-                { id: 13, titulo: 'Livro 13', capa: 'capa13.jpg' },
-            ]
-        };
+    props: {
+        titulo: {
+            type: String,
+            required: true
+        },
+        livros: {
+            type: Array,
+            required: true
+        },
     },
-
     methods: {
         scrollEsq() {
             this.$refs.livros.scrollBy({
@@ -53,12 +42,11 @@ export default {
                 behavior: 'smooth'
             });
         },
-
         scrollDir() {
             this.$refs.livros.scrollBy({
                 left: 600,
                 behavior: 'smooth'
-            });
+        });
         }
     }
 };
@@ -66,10 +54,10 @@ export default {
   
 <style scoped lang="scss">
 @import '../assets/scss/variables';
-  
-.secao-sugestoes {
+
+.secao-livros {
     margin: 50px 0;
-  
+
     .titulo-sec {
         font-size: 2rem;
         font-family: $fonte1;
@@ -78,7 +66,7 @@ export default {
         margin-left: 50px;
         margin-bottom: 20px;
     }
-  
+
     .fundo-livros {
         display: flex;
         align-items: center;
@@ -89,7 +77,7 @@ export default {
         margin: 0 20px;
         border-radius: 10px;
     }
-  
+
     .livros {
         display: flex;
         align-items: center;
@@ -102,7 +90,7 @@ export default {
         white-space: nowrap;
         height: auto;
     }
-  
+
     .botao-nav {
         position: absolute;
         top: 50%;
@@ -117,20 +105,19 @@ export default {
         cursor: pointer;
         z-index: 5;
         transition: background-color 0.3s;
-  
+
         &:hover {
-        background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.7);
         }
-  
+
         &.anterior {
-        left: 10px;
+            left: 10px;
         }
 
         &.proximo {
-        right: 10px;
+            right: 10px;
         }
     }
 }
 </style>
-  
   
