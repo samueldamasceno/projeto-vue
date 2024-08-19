@@ -7,7 +7,7 @@
             <img src="../assets/profile-icon.svg" alt="Profile Icon" @click="redirecionar('Usuário')"/>
         </div>
         <div class="container-itens">
-            <img src="../assets/create-icon.svg" alt="Create Icon" />
+            <img src="../assets/create-icon.svg" alt="Create Icon" @click="redirecionar('Criar')" />
             <img src="../assets/settings-icon.svg" alt="Settings Icon" />
         </div>
     </div>

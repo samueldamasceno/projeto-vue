@@ -41,7 +41,7 @@
     height: 50px;
     width: 50px;
     position: fixed;
-    left: 15px;
+    left: 12px;
     top: 15px;
     z-index: 11;
     cursor: pointer;

@@ -6,6 +6,8 @@ import SearchPage from "@/views/SearchPage.vue";
 import ExplorePage from "@/views/ExplorePage.vue";
 import UserPage from "@/views/UserPage.vue";
 
+import PaginaCriacao from "@/views/PaginaCriacao.vue";
+
 const routes = [
     {
         path: "/",
@@ -33,6 +35,12 @@ const routes = [
                 component: UserPage
             }
         ]
+    },
+    {
+        path: "/criar",
+        name: "Criar",
+        component: PaginaCriacao,
+        children: []
     }
 ]
 
