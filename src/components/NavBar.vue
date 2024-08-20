@@ -1,14 +1,16 @@
 <template>
     <div class="navbar">
-        <div class="container-itens">
-            <img src="../assets/home-icon.svg" alt="Home Icon" @click="redirecionar('Home')" />
-            <img src="../assets/search-icon.svg" alt="Search Icon" @click="redirecionar('Busca')"/>
-            <img src="../assets/discover-icon.svg" alt="Discover Icon" @click="redirecionar('Explorar')" />
-            <img src="../assets/profile-icon.svg" alt="Profile Icon" @click="redirecionar('Usuário')"/>
-        </div>
-        <div class="container-itens">
-            <img src="../assets/create-icon.svg" alt="Create Icon" @click="redirecionar('Criar')" />
-            <img src="../assets/settings-icon.svg" alt="Settings Icon" />
+        <div class="container-container-itens">
+            <div class="container-itens">
+                <img src="../assets/home-icon.svg" alt="Home Icon" @click="redirecionar('Home')" />
+                <img src="../assets/search-icon.svg" alt="Search Icon" @click="redirecionar('Busca')"/>
+                <img src="../assets/discover-icon.svg" alt="Discover Icon" @click="redirecionar('Explorar')" />
+                <img src="../assets/profile-icon.svg" alt="Profile Icon" @click="redirecionar('Usuário')"/>
+            </div>
+            <div class="container-itens">
+                <img src="../assets/create-icon.svg" alt="Create Icon" @click="redirecionar('Criar')" />
+                <img src="../assets/settings-icon.svg" alt="Settings Icon" />
+            </div>
         </div>
     </div>
 </template>
@@ -31,16 +33,13 @@
 
 .navbar {
     background-color: $cor4;
-    width: 80px;
+    width: 90px;
     height: 100vh;
+    top: 0;
     left: 0;
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
     transform: translateX(0);
-    z-index: 10;
+    z-index: 9;
     border-right: 6px solid $cor1;
 
     @media screen and (max-width: 800px) {
@@ -50,46 +49,55 @@
         grid-template-rows: 1fr 1fr;
     }
 
-    img {
-        margin-bottom: 10px;
-        cursor: pointer;
-        width: 40px;
-        height: 40px;
-        transition: filter 0.3s ease-in-out;
-
-        @media screen and (max-width: 800px) {
-            width: 70px;
-            height: 70px;
-        }
-    }
-
-    .container-itens {
+    .container-container-itens {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        padding-top: 60px;
+        height: 100%;
+        width: 100%;
 
-        &:first-child{
-            margin-top: 80px;
+        img {
+            margin-bottom: 10px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            transition: filter 0.3s ease-in-out;
 
-            img {
-                &:hover {
-                    filter: drop-shadow(
-                        0 0 8px $cor1b
-                    )
-                }
+            @media screen and (max-width: 800px) {
+                width: 70px;
+                height: 70px;
             }
         }
 
-        &:nth-child(2) {
-            margin-top: auto;
-            margin-bottom: 5px;
+        .container-itens {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
 
-            img {
-                &:hover {
-                    filter: drop-shadow(
-                        0 0 8px $cor3b
-                    )
+            &:first-child{
+                margin-top: 80px;
+
+                img {
+                    &:hover {
+                        filter: drop-shadow(
+                            0 0 8px $cor1b
+                        )
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+                margin-top: auto;
+                margin-bottom: 5px;
+
+                img {
+                    &:hover {
+                        filter: drop-shadow(
+                            0 0 8px $cor3b
+                        )
+                    }
                 }
             }
         }

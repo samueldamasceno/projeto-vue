@@ -115,7 +115,7 @@ export default {
                 font-size: 1.2rem;
                 font-weight: bold;
                 font-family: $fonte1;
-                z-index: 6;
+                z-index: 5;
                 transition: all 0.4s ease-in-out;
             }
 

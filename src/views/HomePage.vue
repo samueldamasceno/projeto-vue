@@ -1,6 +1,5 @@
 <template>
-    <div>
-        <HomeHeader/>
+    <div class="secoes">
         <SecaoLivros 
             titulo="Continue lendo: "
             :livros="livros"
@@ -20,14 +19,12 @@
 </template>
 
 <script>
-import HomeHeader from '@/components/HomeHeader.vue';
 import SecaoLivros from '@/components/SecaoLivros.vue';
 import SecaoTopLivros from '@/components/SecaoTopLivros.vue';
 
 export default {
     name: 'HomePage',
     components: {
-        HomeHeader,
         SecaoTopLivros,
         SecaoLivros,
     },
@@ -54,4 +51,3 @@ export default {
 
 }
 </script>
-

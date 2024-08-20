@@ -17,22 +17,26 @@ const routes = [
             {
                 path: "",
                 name: "Home",
-                component: HomePage
+                component: HomePage,
+                meta: { headerBehavior: 'dinamico' }
             },
             {
                 path: "busca",
                 name: "Busca",
-                component: SearchPage
+                component: SearchPage,
+                meta: { headerBehavior: 'grande' }
             },
             {
                 path: "explorar",
                 name: "Explorar",
-                component: ExplorePage
+                component: ExplorePage,
+                meta: { headerBehavior: 'pequeno' }
             },
             {
                 path: "usuario",
                 name: "Usuário",
-                component: UserPage
+                component: UserPage,
+                meta: { headerBehavior: 'pequeno' }
             }
         ]
     },
